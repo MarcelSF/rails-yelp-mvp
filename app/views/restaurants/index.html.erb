@@ -1,0 +1,8 @@
+<h1>List of World Famous Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+<ul>
+  <li><%=link_to "#{restaurant.name}: #{restaurant.category.capitalize}. Address: #{restaurant.address}", restaurant_path(restaurant) %></li>
+</ul>
+<% end %>
+
+<button><%= link_to 'Create new Restaurant', new_restaurant_path  %></button>
